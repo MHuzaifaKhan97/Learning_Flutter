@@ -9,8 +9,7 @@ class Themes {
         headline1: TextStyle(color: Colors.black),
       ),
     ),
-    buttonColor: Colors.blue,
-    
+    buttonColor: Colors.orange,
   );
   final darkTheme = ThemeData.dark().copyWith(
     primaryColor: Colors.blueGrey[800],
@@ -20,6 +19,6 @@ class Themes {
         headline1: TextStyle(color: Colors.white),
       ),
     ),
-    buttonColor: Colors.green
+    buttonColor: Colors.green,
   );
 }

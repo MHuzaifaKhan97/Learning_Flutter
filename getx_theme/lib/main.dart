@@ -4,6 +4,7 @@ import 'package:get_storage/get_storage.dart';
 import './home.dart';
 import './theme/themes.dart';
 import './theme/theme_service.dart';
+import './detail.dart';
 
 void main() async {
 
@@ -22,6 +23,10 @@ class MyApp extends StatelessWidget {
       theme: Themes().lightTheme,
       darkTheme: Themes().darkTheme,
       themeMode: ThemeService().getThemeMode(),
+      getPages: [
+        GetPage(name: '/home', page: ()=> HomeScreen()),
+        GetPage(name: '/detail', page: ()=> DetailScreen()),
+      ],
     );
   }
 }

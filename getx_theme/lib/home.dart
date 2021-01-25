@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import './theme/theme_service.dart';
+import './detail.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -20,7 +21,9 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               MaterialButton(
-                child: Text('Change Theme'),
+                child: Text(
+                  'Change Theme',
+                ),
                 color: context.theme.buttonColor,
                 onPressed: () {
                   // before getStorage
@@ -32,8 +35,20 @@ class HomeScreen extends StatelessWidget {
                   ThemeService().changeThemeMode();
                 },
               ),
-            
-            
+              MaterialButton(
+                child: Text(
+                  'Goto Detail',
+                ),
+                color: context.theme.buttonColor,
+                onPressed: () {
+                  //  1. Navigate By Component
+                  // Get.to(DetailScreen());
+                  //  2. Navigate By Name
+                  Get.toNamed('/detail');
+                  //  3. Navigate to Never go back
+                  // Get.off(DetailScreen());
+                },
+              ),
             ]),
       ),
     );
