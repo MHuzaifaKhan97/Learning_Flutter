@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       translations: Messages(),
-      // locale: Locale('en', 'US'), // locale: Get.deviceLocale us used to get mobile default language
+      locale: Locale('en', 'US'), // locale: Get.deviceLocale us used to get mobile default language
       fallbackLocale: Locale('en', 'US'),
       title: 'Internationalization Practice',
       home: HomeScreen(),

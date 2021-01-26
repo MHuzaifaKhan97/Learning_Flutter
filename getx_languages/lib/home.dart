@@ -24,7 +24,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Internationalization'),
+        title: Text('title'.tr),
       ),
       body: Center(
         child: Column(
