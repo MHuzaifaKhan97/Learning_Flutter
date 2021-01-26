@@ -3,7 +3,6 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get.dart';
 import 'package:learn_getx/screens/home/controller/home_controller.dart';
 import 'package:learn_getx/services/api_service.dart';
-import '../../detail/view/detail.dart';
 
 class HomeScreen extends StatelessWidget {
   // this will inject the dependency and also return reference of the service.
@@ -98,6 +97,16 @@ class HomeScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
               color: Colors.blue,
+            ),
+            FlatButton(
+              onPressed: () {
+                Get.toNamed('/login');
+              },
+              child: Text(
+                'Goto Login',
+                style: TextStyle(color: Colors.white),
+              ),
+              color: Colors.green[400],
             ),
           ],
         ),

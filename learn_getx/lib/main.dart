@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:learn_getx/screens/detail/binding/detail_binding.dart';
 import 'package:learn_getx/screens/home/binding/home_binding.dart';
+import 'package:learn_getx/screens/login/view/login.dart';
 import './screens/home/view/home.dart';
 import './screens/detail/view/detail.dart';
 
@@ -20,9 +21,15 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      defaultTransition: Transition.rightToLeft,
       getPages: [
-        GetPage(name: '/home', page: ()=> HomeScreen(),binding: HomeBinding()),
-        GetPage(name: '/detail', page: ()=> DetailScreen(), binding: DetailBinding()),
+        GetPage(
+            name: '/home', page: () => HomeScreen(), binding: HomeBinding()),
+        GetPage(
+            name: '/detail',
+            page: () => DetailScreen(),
+            binding: DetailBinding()),
+        GetPage(name: '/login', page: () => Login()),
       ],
       initialRoute: '/home',
       // home: HomeScreen(),
