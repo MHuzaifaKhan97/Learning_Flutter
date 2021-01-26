@@ -59,13 +59,23 @@ class HomeScreen extends StatelessWidget {
               ),
               color: Colors.orange,
             ),
-          
             FlatButton(
               onPressed: () {
                 Get.defaultDialog(
                   title: "GetX Dialog",
                   // textCustom: "Hello World from GetX Dialog",
                   content: Text("Hello World from GetX Dialog"),
+                  confirm: FlatButton(
+                      onPressed: () {
+                        print('Confirm Pressed');
+                      },
+                      child: Text('Confirm')),
+                  cancel: FlatButton(
+                      onPressed: () {
+                        print('Cancel Pressed');
+                      },
+                      child: Text('Cancel')),
+                  buttonColor: Colors.red,
                 );
               },
               child: Text(
@@ -74,7 +84,21 @@ class HomeScreen extends StatelessWidget {
               ),
               color: Colors.red,
             ),
-          
+            FlatButton(
+              onPressed: () {
+                Get.snackbar(
+                  'Title Snackbar',
+                  'Demo Text Snackbar',
+                  backgroundColor: Colors.orange[300],
+                  snackPosition: SnackPosition.BOTTOM,
+                );
+              },
+              child: Text(
+                'Click to open Snackbar',
+                style: TextStyle(color: Colors.white),
+              ),
+              color: Colors.blue,
+            ),
           ],
         ),
       ),
