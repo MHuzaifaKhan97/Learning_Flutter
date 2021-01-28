@@ -45,9 +45,14 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: () async {
           dynamic expected = await showDialog(
               context: context, builder: (context) => DatePickerDialog());
-          setState(() {
-            widget.result = expected;
-          });
+          if (expected != null) {
+            setState(() {
+              widget.result = expected;
+            });
+          } else {
+            return;
+          }
+          print(widget.result);
         },
         child: Icon(Icons.add),
       ),
